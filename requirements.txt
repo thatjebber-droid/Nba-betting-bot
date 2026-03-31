@@ -38,4 +38,4 @@ def run():
     Client(TWILIO_SID,TWILIO_AUTH).messages.create(body=msg,from_=FROM_PHONE,to=TO_PHONE)
     print(msg)
 
-run(send_telegram(msg))
+run()
