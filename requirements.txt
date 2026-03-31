@@ -35,7 +35,8 @@ def run():
                     if edge>0.05:
                         bets.append(f"{o['name']} {o['price']} edge {round(edge,3)}")
     msg="NBA PICKS:\n"+("\n".join(bets[:5]) if bets else "No bets today")
-    Client(TWILIO_SID,TWILIO_AUTH).messages.create(body=msg,from_=FROM_PHONE,to=TO_PHONE)
-    print(msg)
+    send_telegram(msg)
+print(msg)
+   
 
 run()
